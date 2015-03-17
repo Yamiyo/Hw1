@@ -28,7 +28,10 @@
   </style>
   
 <body>
-<div id="info">Sun-Earth-Moon</div>
+<div id="info">Sun-Earth-Moon<br/>
+		Z is start and stop<br/>
+		X is music start and stop
+</div>
 
 <audio id="sound" autoplay loop style="display:none">
 <source src="music/kiva.mp3" type='audio/mp3'>
@@ -154,7 +157,7 @@ function update()
 	control.update();
 	if ( keyboard.down("Z"))  
 		turn = !turn;    
-	if ( keyboard.down("A"))  
+	if ( keyboard.down("X"))  
 		{
 			audio = !audio;
 			if(audio){
