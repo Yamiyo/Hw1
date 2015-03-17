@@ -28,7 +28,11 @@
   </style>
   
 <body>
-<div id="info">Sun-Earth-Moon</div>
+<div id="info">Sun-Earth-Moon<br/>
+		Z is start or stop<br/>
+		X is music start or stop
+
+</div>
 
 <audio id="sound" autoplay loop style="display:none">
 <source src="music/kiva.mp3" type='audio/mp3'>
@@ -86,27 +90,22 @@ function init() {
 	
 	var light2 = new THREE.PointLight(0xffffff);
     light2.position.set(-120, -120, 0);
-    light2.castShadow = true;
-	scene.add(light2);
+    scene.add(light2);
 	
 	var light3 = new THREE.PointLight(0xffffff);
     light3.position.set(120, -120, 0);
-	light3.castShadow = true;
     scene.add(light3);
 	
 	var light4 = new THREE.PointLight(0xffffff);
     light4.position.set(-120, 120, 0);
-	light4.castShadow = true;
     scene.add(light4);
 	
 	var light5 = new THREE.PointLight(0xffffff);
     light5.position.set(0, 0, 120);
-	light5.castShadow = true;
     scene.add(light5);
 	
 	var light6 = new THREE.PointLight(0xffffff);
     light6.position.set(0, 0, -120);
-	light6.castShadow = true;
     scene.add(light6);
 
     renderer = new THREE.WebGLRenderer({
@@ -154,7 +153,7 @@ function update()
 	control.update();
 	if ( keyboard.down("Z"))  
 		turn = !turn;    
-	if ( keyboard.down("A"))  
+	if ( keyboard.down("X"))  
 		{
 			audio = !audio;
 			if(audio){
